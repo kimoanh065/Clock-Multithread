@@ -27,30 +27,34 @@ public class Clock extends JFrame {
         Container con = getContentPane();
         getContentPane().setLayout(null);
         JLabel lbbackground = new JLabel();
+        lbbackground.setBackground(new Color(255, 250, 250));
         lbbackground.setBounds(0, 0, 433, 263);
-        lbbackground.setIcon(new ImageIcon(Clock.class.getResource("/Background/pastel.jpg")));
+        lbbackground.setOpaque(true);
+        
         
         timelabel = new JLabel();
+        timelabel.setForeground(new Color(255, 20, 147));
         timelabel.setHorizontalAlignment(SwingConstants.CENTER);
         timelabel.setFont(new Font("Courier New", Font.BOLD, 36));
         timelabel.setBounds(95, 44, 203, 78);
 
         JButton btnNewButton = new JButton("Open");
-        btnNewButton.setBackground(new Color(204, 255, 255));
+        btnNewButton.setBackground(new Color(224, 255, 255));
         btnNewButton.setFont(new Font("Courier New", Font.BOLD, 16));
-        btnNewButton.setBounds(247, 179, 85, 21);
+        btnNewButton.setBounds(254, 179, 85, 21);
         
 
         JLabel lblNewLabel = new JLabel("Select timezone");
+        lblNewLabel.setForeground(new Color(124, 252, 0));
         lblNewLabel.setBackground(new Color(255, 255, 204));
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel.setFont(new Font("Courier New", Font.BOLD, 15));
-        lblNewLabel.setBounds(57, 153, 143, 13);
+        lblNewLabel.setBounds(64, 153, 143, 13);
         
 
         JComboBox comboBox = new JComboBox();
         comboBox.setBackground(new Color(255, 255, 255));
-        comboBox.setBounds(57, 179, 143, 21);
+        comboBox.setBounds(64, 179, 143, 21);
         String[] timeZones = {"-12:00", "-11:00", "-10:00", "-09:00", "-08:00", "-07:00", "-06:00",
                 "-05:00", "-04:00", "-03:00", "-02:00", "-01:00", "+00:00 (UTC)", "+01:00", "+02:00",
                 "+03:00", "+04:00", "+05:00", "+06:00", "+07:00", "+08:00", "+09:00", "+10:00", "+11:00",
@@ -60,8 +64,10 @@ public class Clock extends JFrame {
         
 
         JLabel lblNewLabel_1 = new JLabel("UTC");
+        lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 13));
+        lblNewLabel_1.setForeground(new Color(255, 0, 0));
         lblNewLabel_1.setHorizontalAlignment(SwingConstants.RIGHT);
-        lblNewLabel_1.setBounds(3, 184, 44, 13);
+        lblNewLabel_1.setBounds(10, 184, 44, 13);
         getContentPane().add(lblNewLabel_1);
 
         timer = new Timer(1000, e -> updateTime());
