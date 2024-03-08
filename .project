@@ -14,11 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src/Background/pastel.jpg</name>
-			<type>1</type>
-			<location>C:/Users/kimoa/eclipse-workspace/Clock-Multithread/src/Background/pastel.jpg</location>
-		</link>
-	</linkedResources>
 </projectDescription>
