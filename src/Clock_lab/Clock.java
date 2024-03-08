@@ -33,7 +33,7 @@ public class Clock extends JFrame {
         
         
         timelabel = new JLabel();
-        timelabel.setForeground(new Color(255, 20, 147));
+        timelabel.setForeground(new Color(220, 20, 60));
         timelabel.setHorizontalAlignment(SwingConstants.CENTER);
         timelabel.setFont(new Font("Courier New", Font.BOLD, 36));
         timelabel.setBounds(95, 44, 203, 78);
