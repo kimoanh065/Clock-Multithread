@@ -17,11 +17,13 @@ import javax.swing.Timer;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 import java.awt.SystemColor;
+import javax.swing.JTextField;
 
 public class Clock extends JFrame {
     private JLabel timelabel;
     private Timer timer;
     private int sub = 0; 
+    private JTextField txtOanhsClock;
 
     public Clock() {
         Container con = getContentPane();
@@ -33,7 +35,7 @@ public class Clock extends JFrame {
         
         
         timelabel = new JLabel();
-        timelabel.setForeground(new Color(220, 20, 60));
+        timelabel.setForeground(Color.ORANGE);
         timelabel.setHorizontalAlignment(SwingConstants.CENTER);
         timelabel.setFont(new Font("Courier New", Font.BOLD, 36));
         timelabel.setBounds(95, 44, 203, 78);
@@ -62,7 +64,14 @@ public class Clock extends JFrame {
         comboBox.setModel(new DefaultComboBoxModel(timeZones));
         comboBox.setSelectedItem("+07:00");
         
-
+        txtOanhsClock = new JTextField();
+        txtOanhsClock.setForeground(SystemColor.textHighlight);
+        txtOanhsClock.setFont(new Font("Courier New", Font.BOLD, 15));
+        txtOanhsClock.setText("Oanh's Clock");
+        txtOanhsClock.setBounds(10, 10, 118, 19);
+        getContentPane().add(txtOanhsClock);
+        txtOanhsClock.setColumns(10);
+        
         JLabel lblNewLabel_1 = new JLabel("UTC");
         lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 13));
         lblNewLabel_1.setForeground(new Color(255, 0, 0));
@@ -87,12 +96,14 @@ public class Clock extends JFrame {
                 updateTime();
             }
         });
-        
+        con.add(txtOanhsClock);
         con.add(btnNewButton);
         con.add(timelabel);
         con.add(comboBox);
         con.add(lblNewLabel);
         con.add(lbbackground);
+        
+        
 
         setSize(400, 300);
         setTitle("Đồng hồ");
